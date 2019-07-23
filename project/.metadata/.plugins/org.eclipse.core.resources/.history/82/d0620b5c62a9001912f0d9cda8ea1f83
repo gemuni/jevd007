@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example</title>
+</head>
+<style>
+	.myspan {
+		width: 100px;
+		height: 16px;
+		display: inline-block;
+    	border: 1px solid #ccc;
+    	padding: 5px;
+	}
+</style>
+<body>
+	<abc name="myspan" class="myspan" contenteditable="true"></abc>
+	
+	
+	
+	
+	<input type="file" id="myinput" style="border: 1px solid black;" name="myinput" onchange="onChangeHandle(this)" onmouseover="onMouseOverHandle(this)" onmouseout="onMouseOutHandle(this)" />
+	<a href="javascript:void(0)" onclick="clickMeHandle()">Click Me</b>
+	<p id="demo"></p>
+	<script>
+		function clickMeHandle() {
+			alert("Hello!");
+		}
+		
+		//Event Handler
+		function onChangeHandle(ele) {
+			var val = ele.value;
+			//window.open("https://www.google.com/search?q="+val+"&oq="+ val, "_blank");
+		}
+		
+		//Event Handler
+		function onMouseOverHandle(ele) {
+			ele.style.border="1px solid red";
+		}
+		
+		//Event Handler
+		function onMouseOutHandle(ele) {
+			ele.style.border="1px solid black";
+		}
+		
+		var ele = document.getElementById("myinput");
+		console.log(ele)
+		ele.addEventListener("keyup", function(event) {
+			console.log(event.target.value)
+		});
+		
+		ele.addEventListener("keyup", function(event) {
+			if(event.keyCode == 13) {
+				var val = event.target.value;
+				window.open("https://www.google.com/search?q="+val+"&oq="+ val, "_blank");
+			}
+		});
+		
+		/*ele.onkeyup = function (event) {
+			console.log(event)
+			if(event.keyCode == 13) {
+				var val = event.target.value;
+				window.open("https://www.google.com/search?q="+val+"&oq="+ val, "_blank");
+			}
+		}*/
+	</script>
+</body>
+</html>

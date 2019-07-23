@@ -1,0 +1,10 @@
+function changeImage() {
+	var image = document.getElementById('myImage');
+	if (image.name == "h1") {
+		image.src = "images/hinh2.png";
+		image.name = "h2";
+	} else {
+		image.src = "images/hinh1.png";
+		image.name = "h1";
+	}
+}

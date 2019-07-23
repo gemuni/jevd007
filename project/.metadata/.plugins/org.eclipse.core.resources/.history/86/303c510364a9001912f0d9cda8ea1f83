@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example</title>
+	<script src="./lib/jquery-3.4.1.min.js"></script>
+</head>
+<style>
+	.myspan {
+		width: 100px;
+		height: 16px;
+		display: inline-block;
+    	border: 1px solid #ccc;
+    	padding: 5px;
+	}
+</style>
+<body>
+	
+	<a style="margin-right: 10px;" href="javascript:void(0)" onclick="clickMeHandle()">Hide</b>
+	<a href="javascript:void(0)" onclick="clickMeHandle2()">Show</b>
+	<p id="demo">
+		Hello 1! <br/>
+		Hello 2!
+	</p>
+	<p id="demo2">
+		Hello 1! <br/>
+		Hello 2!
+	</p>
+	<script>
+		function clickMeHandle() {
+			//clickMeHandle
+			var ele = $("#demo");
+			ele.hide();
+			console.log(ele)
+		}
+		function clickMeHandle2() {
+			//clickMeHandle
+			var ele = $("#demo");
+			ele.show();
+		}
+	</script>
+</body>
+</html>

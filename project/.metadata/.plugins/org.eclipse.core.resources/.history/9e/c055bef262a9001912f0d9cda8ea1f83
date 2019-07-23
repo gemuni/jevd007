@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example</title>
+	<script src="./lib/jquery-3.4.1.min.js"></script>
+</head>
+<style>
+	.myspan {
+		width: 100px;
+		height: 16px;
+		display: inline-block;
+    	border: 1px solid #ccc;
+    	padding: 5px;
+	}
+</style>
+<body>
+	
+	<a href="javascript:void(0)" onclick="clickMeHandle()">Click Me</b>
+	<p id="demo">
+		Hello!
+		Hello
+	</p>
+	<script>
+		function clickMeHandle() {
+			alert("Hello!");
+		}
+		
+		//Event Handler
+		function onChangeHandle(ele) {
+			var val = ele.value;
+			//window.open("https://www.google.com/search?q="+val+"&oq="+ val, "_blank");
+		}
+		
+		//Event Handler
+		function onMouseOverHandle(ele) {
+			ele.style.border="1px solid red";
+		}
+		
+		//Event Handler
+		function onMouseOutHandle(ele) {
+			ele.style.border="1px solid black";
+		}
+	</script>
+</body>
+</html>
